@@ -1,0 +1,428 @@
+/*.main-section{
+   background-color: $bg-color;
+   padding: 35px 130px 82px 135px;
+   .nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+      .logo{
+         display: flex;
+         align-items: center;
+         gap: 18px;
+         width: 187px;
+         &-img{
+            width: 70px;
+         }
+         &-name{
+            @extend  %work-sans;
+            font-weight: 500;
+            color: $white-text;    
+         }
+      }
+      &-menu{
+         display: flex;
+         align-items: center;
+         gap: 30px;
+         list-style: none;
+         &-item{        
+            &>a{
+               text-decoration: none;
+               @extend %work-sans;
+               color: $white-text;
+               font-weight: 400;
+               font-size: 20px;
+               line-height: 25px;
+               &:hover{
+                  color: $black-text;
+                  font-weight: 500;
+                  text-decoration: double;
+                  text-decoration-line: underline;
+               }
+            }
+         }
+      }
+   }
+   .welcome-wraper{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .welcome{
+         width: 416px;
+         margin-right: 120px;
+         &-header{
+            @extend %work-sans;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px; 
+            letter-spacing: 0.31em;
+            text-transform: uppercase;
+            color: $white-text;
+            padding-bottom: 15px;
+         }
+         &-title{
+            @extend %crimson-text-bold;
+            font-size: 40px;
+            line-height: 50px; 
+            color: $white-text;
+            padding-bottom: 15px;
+         }
+         &-text{
+            @extend %work-sans;  
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 19px; 
+            color: rgba(255, 255, 255, 0.75);
+            padding-bottom: 25px;
+         }
+         &-btn{
+            cursor: pointer;
+            width: 170px;
+            height: 48px;
+            background-color: $white-text;
+            @extend %work-sans;  
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px; 
+            text-align: center;
+            color: $black-text;
+            border-radius: 5px;            
+         }
+      }
+      .welcome-img{
+         max-width: 645px;
+         height: auto;
+         &>img{
+            width: 100%;
+            height: auto;
+         }
+      }
+   }
+}
+
+@include laptop {
+   .main-section{
+      padding: 17px 20px 40px 20px;
+      background-color: red;
+   }
+}
+
+
+@include mobile {
+   .main-section{
+      padding: 17px 20px 40px 20px;
+      .nav{
+           
+         .logo{
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            max-width: 187px;
+            &-img{
+               width: 40px;
+            }
+            &-name{
+               @extend  %work-sans;
+               font-weight: 500;
+               color: $white-text;    
+               font-size: 30px;
+            }
+         }
+      }
+      .welcome-wraper{
+         flex-direction: column;
+         justify-content: center;
+         gap: 30px;
+         .welcome{
+            width: 100%;
+            margin-right: 0;
+            order: 2;
+            &-img{
+               order: 1;
+               width: 100%;
+               height: auto;
+            }
+            &-title{
+               font-size: 28px;
+               line-height: 35px;
+            }
+         }
+
+      }
+   }
+}
+
+*/
+
+/*main-section*/
+
+.main-section{
+   padding: 35px 130px 82px 135px;
+   background-color: $bg-color;
+      .hamburger-menu{
+         display: none;
+      }
+      .nav{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         padding-bottom: 40px;
+         .logo{
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            width: 187px;
+            &-img{
+               width: 70px;
+            }
+            &-name{
+               @extend  %work-sans;
+               font-weight: 500;
+               color: $white-text;    
+            }
+         }
+         &-menu{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+            &-item{        
+               &>a{
+                  text-decoration: none;
+                  @extend %work-sans;
+                  color: $white-text;
+                  font-weight: 400;
+                  font-size: 20px;
+                  line-height: 25px;
+                  &:hover{
+                     color: $black-text;
+                     font-weight: 500;
+                     text-decoration: double;
+                     text-decoration-line: underline;
+                  }
+               }
+            }
+         }
+}
+      .welcome-wraper{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         .welcome{
+            width: 416px;
+            margin-right: 120px;
+            &-header{
+               @extend %work-sans;
+               font-weight: 700;
+               font-size: 16px;
+               line-height: 20px; 
+               letter-spacing: 0.31em;
+               text-transform: uppercase;
+               color: $white-text;
+               padding-bottom: 15px;
+            }
+            &-title{
+               @extend %crimson-text-bold;
+               font-size: 40px;
+               line-height: 50px; 
+               color: $white-text;
+               padding-bottom: 15px;
+            }
+            &-text{
+               @extend %work-sans;  
+               font-weight: 400;
+               font-size: 15px;
+               line-height: 19px; 
+               color: rgba(255, 255, 255, 0.75);
+               padding-bottom: 25px;
+            }
+            &-btn{
+               cursor: pointer;
+               width: 170px;
+               height: 48px;
+               background-color: $white-text;
+               @extend %work-sans;  
+               font-weight: 400;
+               font-size: 20px;
+               line-height: 25px; 
+               text-align: center;
+               color: $black-text;
+               border-radius: 5px;            
+            }
+         }
+         .welcome-img{
+            max-width: 645px;
+            height: auto;
+            &>img{
+               width: 100%;
+               height: auto;
+            }
+         }
+      }
+   }
+
+/*adaptive breackpoints*/
+@include laptop{
+   .wraper {
+      width: 100%;
+      margin: 0 auto;
+    }
+}
+@include mobile{
+   .wraper {
+      width: 100%;
+      margin: 0 auto;
+      .main-section{
+         padding: 0px 20px 40px 20px;
+      .nav{
+         display: none;
+      }
+      //mobile menu
+      .hamburger-menu{
+         display: flex;
+         align-items: center;
+         position: fixed;
+         top: 0;
+         left: 0;
+         background-color: $bg-color;
+         padding-top: 17px;
+         width: 100%;
+         height: 68px;
+         .logo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          
+            &-img{
+               width: 45px;
+               height: 35px;
+            }
+            &-name{
+               font-weight: 500;
+               color: $white-text;    
+               font-size: 30px;
+            }
+         }
+         #menu-toggle{
+            opacity: 0;
+         }
+         .menu-btn {
+            position: fixed;
+            top: 40px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 1;
+            &>span{
+               display: block;
+               position: absolute;
+               width: 100%;
+               height: 3px;
+               background-color: $white-text;
+               &::before{
+                  display: block;
+                  position: absolute;
+                  width: 100%;
+                  height: 2px;
+                  background-color: $white-text;
+                  content: '';
+                  top: -8px;
+               }
+               &::after{
+                  display: block;
+                  position: absolute;
+                  width: 100%;
+                  height: 2px;
+                  background-color: $white-text;
+                  content: '';
+                  top: 8px;
+               }
+            }
+         }
+          .nav-menu{
+            display: block;
+            position: fixed;
+            visibility: hidden;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 30px 0;
+            list-style: none;
+            text-align: center;
+            background-color: #ECEFF1;
+            box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+            &-item{
+               display: block;
+               padding: 12px 24px;
+               color: #333;
+               font-size: 20px;
+               font-weight: 600;
+               text-decoration: none;
+               margin-right: 0;     
+               & a{
+                  font-weight: 500;
+                  text-transform: uppercase;
+                  text-decoration: none;
+                  font-size: 16px;
+                  line-height: 24px;
+                  letter-spacing: 0.1em;
+                  color: #000;
+               }
+               &:hover{
+                  background-color: #CFD8DC;
+               }    
+            }      
+          }
+         #menu-toggle:checked ~ .menu-btn > span {
+            transform: rotate(45deg);
+         }
+         #menu-toggle:checked ~ .menu-btn > span::before {
+            top: 0;
+            transform: rotate(0);
+         }
+         #menu-toggle:checked ~ .menu-btn > span::after {
+            top: 0;
+            transform: rotate(90deg);
+         }
+         #menu-toggle:checked ~ .nav-menu {
+            visibility: visible;
+            left: 0;
+         }
+       }//end mobile menu
+       .welcome-wraper{
+         flex-direction: column;
+         justify-content: center;
+         gap: 30px;
+         .welcome{
+            width: 100%;
+            margin-right: 0;
+            order: 2;
+            &-img{
+               order: 1;
+               width: 100%;
+               height: auto;
+            }
+            &-title{
+               font-size: 28px;
+               line-height: 35px;
+            }
+         }
+
+      }
+      }
+   }
+}
+
+
+
+
+
+
+

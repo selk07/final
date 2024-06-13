@@ -1,0 +1,54 @@
+$bg-color:#74C69D;
+$header-text:$bg-color;
+$white-text: #fff;
+$black-text:#000;
+
+// media breakpoint
+$breackpoint-xxl: 1320px;
+$breackpoint-xl: 1000px;
+$breackpoint-sm: 500px;
+
+.black-btn{
+   cursor: pointer;
+   width: 170px;
+   height: 48px;
+   background-color: $black-text;
+   @extend %work-sans;  
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 25px; 
+   text-align: center;
+   color: $white-text;
+   border-radius: 5px;            
+}
+.team, .partners {
+   max-width: 410px;
+   text-align: center;
+}
+.team-header, .partners-header{
+   @extend %work-sans;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 20px; 
+   letter-spacing: 0.31em;
+   text-transform: uppercase;
+   color: $bg-color;
+   padding-bottom: 16px;
+}
+.team-title, .partners-title, .contact-title{
+   @extend %crimson-text-bold;
+   font-size: 40px;
+   line-height: 50px; 
+   text-align: center;
+   color: $black-text;
+   padding-bottom: 16px;
+}
+
+.team-text, .partners-text, .contact-text{
+   @extend %work-sans;
+   font-size: 20px;
+   line-height: 25px; 
+   color: $black-text;
+
+
+}
