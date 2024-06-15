@@ -1,9 +1,4 @@
-@mixin desktop(){
-   @media (max-width:$breackpoint-xxl){
-      @content;
-   }
-}
-@mixin laptop(){
+@mixin tablet(){
    @media (max-width:$breackpoint-xl){
       @content;
    }

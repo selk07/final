@@ -79,165 +79,8 @@ body {
     font-size: 24px;
   }
 }
-/*.main-section{
-   background-color: $bg-color;
-   padding: 35px 130px 82px 135px;
-   .nav{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 40px;
-      .logo{
-         display: flex;
-         align-items: center;
-         gap: 18px;
-         width: 187px;
-         &-img{
-            width: 70px;
-         }
-         &-name{
-            @extend  %work-sans;
-            font-weight: 500;
-            color: $white-text;    
-         }
-      }
-      &-menu{
-         display: flex;
-         align-items: center;
-         gap: 30px;
-         list-style: none;
-         &-item{        
-            &>a{
-               text-decoration: none;
-               @extend %work-sans;
-               color: $white-text;
-               font-weight: 400;
-               font-size: 20px;
-               line-height: 25px;
-               &:hover{
-                  color: $black-text;
-                  font-weight: 500;
-                  text-decoration: double;
-                  text-decoration-line: underline;
-               }
-            }
-         }
-      }
-   }
-   .welcome-wraper{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      .welcome{
-         width: 416px;
-         margin-right: 120px;
-         &-header{
-            @extend %work-sans;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 20px; 
-            letter-spacing: 0.31em;
-            text-transform: uppercase;
-            color: $white-text;
-            padding-bottom: 15px;
-         }
-         &-title{
-            @extend %crimson-text-bold;
-            font-size: 40px;
-            line-height: 50px; 
-            color: $white-text;
-            padding-bottom: 15px;
-         }
-         &-text{
-            @extend %work-sans;  
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 19px; 
-            color: rgba(255, 255, 255, 0.75);
-            padding-bottom: 25px;
-         }
-         &-btn{
-            cursor: pointer;
-            width: 170px;
-            height: 48px;
-            background-color: $white-text;
-            @extend %work-sans;  
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 25px; 
-            text-align: center;
-            color: $black-text;
-            border-radius: 5px;            
-         }
-      }
-      .welcome-img{
-         max-width: 645px;
-         height: auto;
-         &>img{
-            width: 100%;
-            height: auto;
-         }
-      }
-   }
-}
-
-@include laptop {
-   .main-section{
-      padding: 17px 20px 40px 20px;
-      background-color: red;
-   }
-}
-
-
-@include mobile {
-   .main-section{
-      padding: 17px 20px 40px 20px;
-      .nav{
-
-         .logo{
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            max-width: 187px;
-            &-img{
-               width: 40px;
-            }
-            &-name{
-               @extend  %work-sans;
-               font-weight: 500;
-               color: $white-text;    
-               font-size: 30px;
-            }
-         }
-      }
-      .welcome-wraper{
-         flex-direction: column;
-         justify-content: center;
-         gap: 30px;
-         .welcome{
-            width: 100%;
-            margin-right: 0;
-            order: 2;
-            &-img{
-               order: 1;
-               width: 100%;
-               height: auto;
-            }
-            &-title{
-               font-size: 28px;
-               line-height: 35px;
-            }
-         }
-
-      }
-   }
-}
-
-*/
-/*main-section*/
 .main-section {
+  width: 100%;
   padding: 35px 130px 82px 135px;
   background-color: #74C69D;
 }
@@ -285,14 +128,15 @@ body {
   text-decoration-line: underline;
 }
 .main-section .welcome-wraper {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 120px;
 }
 .main-section .welcome-wraper .welcome {
-  width: 416px;
-  margin-right: 120px;
+  flex: 1 0 230px;
 }
 .main-section .welcome-wraper .welcome-header {
   font-weight: 700;
@@ -328,29 +172,18 @@ body {
   color: #000;
   border-radius: 5px;
 }
-.main-section .welcome-wraper .welcome-img {
-  max-width: 645px;
-  height: auto;
-}
 .main-section .welcome-wraper .welcome-img > img {
   width: 100%;
-  height: auto;
 }
 
 /*adaptive breackpoints*/
-@media (max-width: 1000px) {
-  .wraper {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
 @media (max-width: 500px) {
   .wraper {
     width: 100%;
     margin: 0 auto;
   }
   .wraper .main-section {
-    padding: 0px 20px 40px 20px;
+    padding: 87px 20px 40px 20px;
   }
   .wraper .main-section .nav {
     display: none;
@@ -362,9 +195,10 @@ body {
     top: 0;
     left: 0;
     background-color: #74C69D;
-    padding-top: 17px;
+    padding: 17px;
     width: 100%;
     height: 68px;
+    z-index: 2;
   }
   .wraper .main-section .hamburger-menu .logo {
     display: flex;
@@ -385,12 +219,12 @@ body {
   }
   .wraper .main-section .hamburger-menu .menu-btn {
     position: fixed;
-    top: 40px;
+    top: 32px;
     right: 20px;
     width: 30px;
     height: 30px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 3;
   }
   .wraper .main-section .hamburger-menu .menu-btn > span {
     display: block;
@@ -429,7 +263,7 @@ body {
     padding: 30px 0;
     list-style: none;
     text-align: center;
-    background-color: #ECEFF1;
+    background-color: #74C69D;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
   }
   .wraper .main-section .hamburger-menu .nav-menu-item {
@@ -448,10 +282,14 @@ body {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.1em;
-    color: #000;
+    color: #fff;
   }
   .wraper .main-section .hamburger-menu .nav-menu-item:hover {
-    background-color: #CFD8DC;
+    background-color: #000;
+    font-weight: 500;
+    -webkit-text-decoration: double;
+            text-decoration: double;
+    text-decoration-line: underline;
   }
   .wraper .main-section .hamburger-menu #menu-toggle:checked ~ .menu-btn > span {
     transform: rotate(45deg);
@@ -481,9 +319,52 @@ body {
   .wraper .main-section .welcome-wraper .welcome-img {
     order: 1;
     width: 100%;
-    height: auto;
   }
   .wraper .main-section .welcome-wraper .welcome-title {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+@media (max-width: 1000px) {
+  .wraper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main-section {
+    padding: 17px 70px 40px 70px;
+  }
+  .main-section .nav {
+    gap: 20px;
+  }
+  .main-section .nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    gap: 10px;
+    width: 152px;
+  }
+  .main-section .nav .logo-img {
+    width: 100%;
+  }
+  .main-section .nav .logo-name {
+    align-self: center;
+    font-weight: 500;
+    color: #fff;
+    font-size: 30px;
+  }
+  .main-section .welcome-wraper {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .main-section .welcome-wraper .welcome-img > img {
+    width: 100%;
+  }
+  .main-section .welcome-wraper .welcome {
+    margin-right: 0;
+  }
+  .main-section .welcome-wraper .welcome-title {
     font-size: 28px;
     line-height: 35px;
   }
@@ -552,17 +433,39 @@ body {
   color: rgba(33, 37, 41, 0.5);
   margin-bottom: 16px;
 }
-.about-section .about .about-img {
+.about-section .about-img {
   max-width: 600px;
 }
-.about-section .about .about-img > img {
+.about-section .about-img > img {
   width: 100%;
   height: 100%;
 }
 
+@media (max-width: 1000px) {
+  .about-section {
+    padding: 73px 70px 80px 70px;
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+  }
+  .about-section .about {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-section .about-info {
+    width: 100%;
+    order: 2;
+  }
+  .about-section .about-img {
+    max-width: 600px;
+  }
+  .about-section .about-img > img {
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .about-section {
-    padding: 22px 20px 30px 20px;
+    padding: 22px 20px 20px 20px;
     display: flex;
     gap: 60px;
     flex-direction: column;
@@ -610,16 +513,17 @@ body {
 }
 
 .wraper-item {
-  max-width: 255px;
-  max-height: 300px;
+  flex: 1 1 auto;
+  width: 15vw;
+  height: 330px;
   border-radius: 5px;
   box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
   background: #fff;
   padding: 20px 25px;
 }
 .wraper-item .item-img {
-  max-width: 175px;
-  max-height: 175px;
+  width: 100%;
+  height: 175px;
   border-radius: 50%;
   border: 2px solid #000;
   overflow: hidden;
@@ -640,7 +544,7 @@ body {
 
 @media (max-width: 500px) {
   .team-section {
-    padding: 18px 20px 39px 20px;
+    padding: 20px 20px 39px 20px;
   }
   .team-section .team {
     margin-bottom: 0;
@@ -659,6 +563,37 @@ body {
   .wraper-carousel {
     margin-bottom: 35px;
     margin-top: 41px;
+  }
+  .wraper-item {
+    width: 52vw;
+  }
+}
+@media (max-width: 1000px) {
+  .team-section {
+    padding: 18px 20px 39px 20px;
+  }
+  .team-section .team {
+    margin-bottom: 0;
+  }
+  .team-section .team-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .team-section .team-text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .wraper-carousel {
+    margin-bottom: 35px;
+    margin-top: 41px;
+  }
+  .wraper-item {
+    flex: 0 1 220px;
+    width: 15vw;
   }
 }
 .contact-section {
@@ -679,6 +614,7 @@ body {
 .contact-form {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 54px;
 }
 
@@ -714,14 +650,38 @@ body {
 }
 
 .map-form {
+  flex: 1 0 50%;
   max-width: 575px;
-  max-height: 378px;
+  height: 385px;
 }
 .map-form > img {
   width: 100%;
   height: 100%;
 }
 
+@media (max-width: 1000px) {
+  .contact-section {
+    padding: 30px 80px 93px 80px;
+    gap: 41px;
+  }
+  .contact-section .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .contact-section .contact-text {
+    margin-bottom: 45px;
+  }
+  .postcard {
+    width: 95%;
+    order: 2;
+  }
+  .map-form {
+    margin: 0 auto;
+  }
+}
 @media (max-width: 500px) {
   .contact-section {
     padding: 36px 20px 59px 20px;
@@ -773,5 +733,6 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    padding: 20px 40px;
   }
 }
